@@ -19,6 +19,8 @@ namespace DBConnection
         public Form1()
         {
             InitializeComponent();
+            this.connection.StateChange += new System.Data.StateChangeEventHandler(this.connection_StateChange);
+
         }
 
         private void connectToDBToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,10 +55,14 @@ namespace DBConnection
                 MessageBox.Show(Xcp.Message, "Unexpected Exception",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
         }
+
+        private void connection_StateChange(object sender, System.Data.StateChangeEventArgs e)
+        {
+            connectToDBToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Closed);
+            disconnectToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Open);
+        }
+
 
         private void disconnectToolStripMenuItem_Click(object sender, EventArgs e)
         {

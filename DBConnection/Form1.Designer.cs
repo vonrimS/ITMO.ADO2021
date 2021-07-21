@@ -33,6 +33,7 @@ namespace DBConnection
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disconnectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectionListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@ namespace DBConnection
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connectToDBToolStripMenuItem,
-            this.disconnectToolStripMenuItem});
+            this.disconnectToolStripMenuItem,
+            this.connectionListToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.файлToolStripMenuItem.Text = "File";
@@ -68,6 +70,13 @@ namespace DBConnection
             this.disconnectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.disconnectToolStripMenuItem.Text = "Disconnect";
             this.disconnectToolStripMenuItem.Click += new System.EventHandler(this.disconnectToolStripMenuItem_Click);
+            // 
+            // connectionListToolStripMenuItem
+            // 
+            this.connectionListToolStripMenuItem.Name = "connectionListToolStripMenuItem";
+            this.connectionListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.connectionListToolStripMenuItem.Text = "Connection List";
+            this.connectionListToolStripMenuItem.Click += new System.EventHandler(this.connectionListToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -91,6 +100,7 @@ namespace DBConnection
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectToDBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem disconnectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem connectionListToolStripMenuItem;
     }
 }
 

@@ -9,19 +9,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DBConnection
 {
     public partial class Form1 : Form
     {
         OleDbConnection connection = new OleDbConnection();
-        string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Northwind;Data Source=DESKTOP-17VNONF";
+        //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Northwind;Data Source=DESKTOP-17VNONF";
         public Form1()
         {
             InitializeComponent();
             this.connection.StateChange += new System.Data.StateChangeEventHandler(this.connection_StateChange);
 
         }
+
+        static string GetConnectionStringByName(string name)
+        {
+            string returnValue = null;
+            ConnectionStringSettings settings =
+                ConfigurationManager.ConnectionStrings[name];
+            if (settings != null)
+                returnValue = settings.ConnectionString;
+            return returnValue;
+        }
+
+        string testConnect = GetConnectionStringByName("DBConnect.NorthwindConnectionString");
 
         private void connectToDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -73,7 +86,20 @@ namespace DBConnection
             }
             else
                 MessageBox.Show("Соединение с базой данных уже закрыто");
+        }
 
+        private void connectionListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConnectionStringSettingsCollection settings = ConfigurationManager.ConnectionStrings;
+            if (settings != null)
+            {
+                foreach (ConnectionStringSettings cs in settings)
+                {
+                    MessageBox.Show("name = " + cs.Name);
+                    MessageBox.Show("providerName = " + cs.ProviderName);
+                    MessageBox.Show("connectionString = " + cs.ConnectionString);
+                }
+            }
         }
     }
 }

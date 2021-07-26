@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindingSimple", "DataBi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindingComplex", "DataBindingComplex\DataBindingComplex.csproj", "{C97DE1AD-B950-4673-B4B2-5AF246EA4056}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewExample", "DataGridViewExample\DataGridViewExample.csproj", "{97408962-98BD-44D9-9433-7A69D0DF59A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{C97DE1AD-B950-4673-B4B2-5AF246EA4056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C97DE1AD-B950-4673-B4B2-5AF246EA4056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C97DE1AD-B950-4673-B4B2-5AF246EA4056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97408962-98BD-44D9-9433-7A69D0DF59A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97408962-98BD-44D9-9433-7A69D0DF59A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97408962-98BD-44D9-9433-7A69D0DF59A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97408962-98BD-44D9-9433-7A69D0DF59A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

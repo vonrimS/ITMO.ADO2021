@@ -27,8 +27,6 @@ namespace DatasetDesigner
             {
                 CustomersListBox.Items.Add(NWCustomer.CompanyName);
             }
-
-
         }
     }
 }

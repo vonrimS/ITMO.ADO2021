@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadDataSetXml", "LoadDataS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq_Student", "Linq_Student\Linq_Student.csproj", "{64258AAF-B9D5-4E03-A719-A8231D66953C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQsql_1", "LINQsql_1\LINQsql_1.csproj", "{0433BD7B-9740-4640-8E19-4D59FB7D1E2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{64258AAF-B9D5-4E03-A719-A8231D66953C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64258AAF-B9D5-4E03-A719-A8231D66953C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64258AAF-B9D5-4E03-A719-A8231D66953C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0433BD7B-9740-4640-8E19-4D59FB7D1E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0433BD7B-9740-4640-8E19-4D59FB7D1E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0433BD7B-9740-4640-8E19-4D59FB7D1E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0433BD7B-9740-4640-8E19-4D59FB7D1E2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

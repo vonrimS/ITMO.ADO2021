@@ -24,11 +24,25 @@ namespace LINQsql_1
         {
             DataContext db = new DataContext (@"Data Source=(local);Initial Catalog=Northwind;Integrated Security=True");
 
-            var results = from c in db.GetTable<Customer>()
-                          where c.City == "London"
-                          select c;
-            foreach (var c in results)
-                listBox1.Items.Add(c.ToString());
+            //var results = from c in db.GetTable<Customer>()
+            //              where c.City == "London"
+            //              select c;
+            //foreach (var c in results)
+            //    listBox1.Items.Add(c.ToString());
+
+            var custQuery =
+                  from cust in db.GetTable<Customer>()
+                  where cust.Orders.Any()
+                  select cust;
+
+            foreach (var custObj in custQuery)
+            {
+                ListViewItem item =
+                    listView1.Items.Add(custObj.CustomerID.ToString());
+                item.SubItems.Add(custObj.City.ToString());
+                item.SubItems.Add(custObj.Orders.Count.ToString());
+            }
+
 
         }
     }

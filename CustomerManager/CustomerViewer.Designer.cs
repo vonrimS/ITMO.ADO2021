@@ -51,6 +51,7 @@ namespace CustomerManager
             this.CustomerradioButton = new System.Windows.Forms.RadioButton();
             this.labelid = new System.Windows.Forms.Label();
             this.textBoxCustomer = new System.Windows.Forms.TextBox();
+            this.ViporderradioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -207,6 +208,7 @@ namespace CustomerManager
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ViporderradioButton);
             this.groupBox1.Controls.Add(this.OrderradioButton);
             this.groupBox1.Controls.Add(this.CustomerradioButton);
             this.groupBox1.Location = new System.Drawing.Point(430, 75);
@@ -219,7 +221,7 @@ namespace CustomerManager
             // OrderradioButton
             // 
             this.OrderradioButton.AutoSize = true;
-            this.OrderradioButton.Location = new System.Drawing.Point(225, 29);
+            this.OrderradioButton.Location = new System.Drawing.Point(139, 29);
             this.OrderradioButton.Name = "OrderradioButton";
             this.OrderradioButton.Size = new System.Drawing.Size(56, 17);
             this.OrderradioButton.TabIndex = 0;
@@ -230,7 +232,7 @@ namespace CustomerManager
             // CustomerradioButton
             // 
             this.CustomerradioButton.AutoSize = true;
-            this.CustomerradioButton.Location = new System.Drawing.Point(100, 29);
+            this.CustomerradioButton.Location = new System.Drawing.Point(49, 29);
             this.CustomerradioButton.Name = "CustomerradioButton";
             this.CustomerradioButton.Size = new System.Drawing.Size(74, 17);
             this.CustomerradioButton.TabIndex = 0;
@@ -253,6 +255,17 @@ namespace CustomerManager
             this.textBoxCustomer.Name = "textBoxCustomer";
             this.textBoxCustomer.Size = new System.Drawing.Size(259, 20);
             this.textBoxCustomer.TabIndex = 10;
+            // 
+            // ViporderradioButton
+            // 
+            this.ViporderradioButton.AutoSize = true;
+            this.ViporderradioButton.Location = new System.Drawing.Point(211, 29);
+            this.ViporderradioButton.Name = "ViporderradioButton";
+            this.ViporderradioButton.Size = new System.Drawing.Size(76, 17);
+            this.ViporderradioButton.TabIndex = 1;
+            this.ViporderradioButton.TabStop = true;
+            this.ViporderradioButton.Text = "VIP Orders";
+            this.ViporderradioButton.UseVisualStyleBackColor = true;
             // 
             // CustomerViewer
             // 
@@ -314,6 +327,7 @@ namespace CustomerManager
         private System.Windows.Forms.RadioButton CustomerradioButton;
         private System.Windows.Forms.Label labelid;
         private System.Windows.Forms.TextBox textBoxCustomer;
+        private System.Windows.Forms.RadioButton ViporderradioButton;
     }
 }
 

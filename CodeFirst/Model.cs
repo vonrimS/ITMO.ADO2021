@@ -61,5 +61,12 @@ namespace CodeFirst
 
         }
 
-    }
+
+        [Table("VipOrders")]
+        public class VipOrder : Order
+        {            
+            public string Status { get; set; }
+        }
+
+}
 
